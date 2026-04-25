@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "automerge": false,
+  "pinVersions": false,
+  "ignoreUnstable": true,
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies"],
+      "automerge": true
+    },
+    {
+      "matchPackageNames": ["oxfmt"],
+      "ignoreUnstable": false
+    }
+  ]
+}

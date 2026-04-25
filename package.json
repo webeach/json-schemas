@@ -1,0 +1,42 @@
+{
+  "name": "@webeach/json-schemas",
+  "private": true,
+  "description": "JSON schemas for the Webeach ecosystem packages",
+  "homepage": "https://schemas.webea.ch",
+  "bugs": {
+    "url": "https://github.com/webeach/json-schemas/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Ruslan Martynov",
+    "email": "github@webea.ch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webeach/json-schemas"
+  },
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "prepare": "is-ci || husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.0.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "husky": "^9.1.7",
+    "is-ci": "^4.1.0",
+    "lint-staged": "^16.1.6",
+    "oxfmt": "^0.36.0"
+  },
+  "lint-staged": {
+    "**/*.{cjs,cts,js,jsx,mjs,mts,ts,tsx,json}": [
+      "oxfmt"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": "^10"
+  },
+  "packageManager": "pnpm@10.7.1"
+}
